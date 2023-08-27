@@ -1,0 +1,14 @@
+{
+  "name": "The",
+  "duration": 9,
+  "maxGroupSize": "Heello",
+  "difficulty": "easyy",
+  "ratingsAverage": 4.6,
+  "ratingsQuantity": 54,
+  "price": 1197,
+  "summary": "Living the life of Wanderlust in the US' most beatiful cities",
+  "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet.\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat!",
+  "imageCover": "nft-5-cover.jpg",
+  "images": ["nft-4-1.jpg", "nft-4-2.jpg", "nft-4-3.jpg"],
+  "startDates": ["2024-03-11,10:00", "2024-05-02,10:00", "2024-06-09,10:00"]
+}
