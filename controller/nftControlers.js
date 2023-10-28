@@ -47,7 +47,7 @@ exports.getNFT = asyncErrorHandler(async (req, res, next) => {
 // CREATE NFT
 exports.createNFT = asyncErrorHandler(async (req, res, next) => {
   const newNFT = await NFT.create(req.body);
-  res.status(200).json({
+  res.status(201).json({
     status: "success",
     data: {
       nft: newNFT,

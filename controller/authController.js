@@ -132,7 +132,7 @@ exports.forgotPassword = asyncErrorHandler(async (req, res, next) => {
 
   if (!user) {
     return next(
-      new AppError("Email not valid. Please provide correct Email.", 400),
+      new AppError("Email not valid. Please provide correct Email.", 401),
     );
   }
 
@@ -215,8 +215,8 @@ exports.resetPassword = asyncErrorHandler(async (req, res, next) => {
 // UPDATE PASSWORD
 exports.updatePassword = asyncErrorHandler(async (req, res, next) => {
   const user = await User.findById({ _id: req.user.id }).select("+password");
-  console.log(user);
-  console.log(req.body);
+  // console.log(user);
+  // console.log(req.body);
   if (!(await user.correctPassword(req.body.currentPassword, user.password))) {
     return next(new AppError("Password invalid.", 401));
   }
@@ -225,6 +225,6 @@ exports.updatePassword = asyncErrorHandler(async (req, res, next) => {
   user.passwordConfirm = req.body.passwordConfirm;
   await user.save({ validateBeforeSave: true });
 
-  const loginToken = createToken(user_id);
+  const loginToken = createToken(user._id);
   sendToken(res, loginToken, user, 200);
 });

@@ -51,8 +51,6 @@ exports.updateUser = asyncErrorHandler(async (req, res, next) => {
     );
   }
 
-  console.log(req);
-
   const user = await User.findOneAndUpdate({ _id: req.user.id }, req.body, {
     new: true,
     runValidators: true,
